@@ -82,11 +82,3 @@ led_config_t g_led_config = { {
 } };
 #endif
 
-void keyboard_post_init_user(void) {
-    // Sync initial numlock state from the host
-    if (host_keyboard_led_state().num_lock) {
-        layer_on(_NUMLOCK);
-    } else {
-        layer_off(_FN);
-    }
-}

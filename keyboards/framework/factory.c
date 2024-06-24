@@ -121,5 +121,6 @@ bool via_command_kb(uint8_t *data, uint8_t length) {
 #ifndef VIA_ENABLE
 void raw_hid_receive(uint8_t *data, uint8_t length) {
   handle_hid(data, length);
+  handle_macro_hid(data, length);
 }
 #endif
